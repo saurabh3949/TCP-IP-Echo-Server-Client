@@ -27,7 +27,7 @@ func main() {
 }
   conn, err := net.Dial("tcp", "catserver"+port)
   if err != nil {
-    fmt.Println("Cannot connect to server:", err.Error())
+    fmt.Println("File is empty or cannot connect to server.")
     os.Exit(1)
   }
   for i := 0; i < 10; i++ {
