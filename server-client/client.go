@@ -4,6 +4,7 @@ import "fmt"
 import "bufio"
 import "os"
 import "time"
+import "strings"
 
 func main() {
   file := os.Args[1]
@@ -19,7 +20,7 @@ func main() {
   for {
     line, err := r.ReadString('\n')
     // fmt.Print(line)
-    m[line] = true
+    m[strings.ToUpper(line)] = true
     if err != nil {
       break
   }
